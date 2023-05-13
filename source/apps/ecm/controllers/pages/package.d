@@ -1,4 +1,6 @@
 module apps.ecm.controllers.pages;
 
-@safe:
-import apps.ecm;
+public {
+  import apps.ecm.controllers.pages.error;
+  import apps.ecm.controllers.pages.index;
+}

@@ -1,9 +1,8 @@
 module apps.ecm.controllers;
 
-@safe:
-import apps.ecm;
-
-public import apps.ecm.controllers.actions;
-public import apps.ecm.controllers.apis;
-public import apps.ecm.controllers.components;
-public import apps.ecm.controllers.pages;
+public {
+  import apps.ecm.controllers.actions;
+  import apps.ecm.controllers.apis;
+  import apps.ecm.controllers.components;
+  import apps.ecm.controllers.pages;
+}
