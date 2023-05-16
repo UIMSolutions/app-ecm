@@ -24,9 +24,9 @@ public {
   import apps.ecm.views;
 }
 
-DApplication ecmApp;
+DApp ecmApp;
 static this() {
-  ecmApp = Application
+  ecmApp = App
     .name("ecmApp")
     .rootPath("/apps/ecm")
     .addRoute(Route("/", HTTPMethod.GET, ECMIndexPageController));
