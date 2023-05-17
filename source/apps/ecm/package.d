@@ -29,5 +29,6 @@ static this() {
   ecmApp = App
     .name("ecmApp")
     .rootPath("/apps/ecm")
+    .addRoute(Route("", HTTPMethod.GET, ECMIndexPageController));
     .addRoute(Route("/", HTTPMethod.GET, ECMIndexPageController));
 }
