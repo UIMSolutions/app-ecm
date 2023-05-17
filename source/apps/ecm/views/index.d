@@ -6,12 +6,13 @@ import apps.ecm;
 class DECMIndexView : DView {
   mixin(ViewThis!("ECMIndexView"));
 
-  override void beforeH5(STRINGAA options = null) {
-    super.beforeH5(options);
+  override DH5Obj[] toH5(STRINGAA options = null) {
+    debugMethodCall(moduleName!DECMIndexView~":DECMIndexView("~this.className~")::toH5");
+    super.toH5(options);
 
-    /* this
-      .pageHeader
-        .title("ECM -> Index"); */
+    return [
+      H5Div("APP ECM -> Index")
+    ].toH5;
   }
 }
-mixin(ViewCalls!("ECMIndexView", "DECMIndexView"));
+mixin(ViewCalls!("ECMIndexView"));
