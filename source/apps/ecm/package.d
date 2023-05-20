@@ -26,7 +26,7 @@ public {
 }
 
 static this() {
-  AppRegistry.register(  
+  AppRegistry.register("apps.ecm",  
     App
     .name("ecmApp")
     .rootPath("/apps/ecm")
