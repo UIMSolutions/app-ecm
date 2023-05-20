@@ -13,4 +13,4 @@ class DECMErrorPageController : DAPPPageController {
       .view(ECMErrorView(this));
   }
 }
-mixin(ControllerCalls!("ECMErrorPageController", "DECMErrorPageController"));
+mixin(ControllerCalls!("ECMErrorPageController"));
