@@ -13,3 +13,4 @@ app-ecm-test-*
 *.o
 *.obj
 *.lst
+libapp-ecm.a

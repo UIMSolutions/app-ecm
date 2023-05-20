@@ -25,11 +25,11 @@ public {
   import apps.ecm.views;
 }
 
-DApp ecmApp;
 static this() {
-  ecmApp = App
+  AppRegistry.register(  
+    App
     .name("ecmApp")
     .rootPath("/apps/ecm")
     .addRoute(Route("", HTTPMethod.GET, ECMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, ECMIndexPageController));
+    .addRoute(Route("/", HTTPMethod.GET, ECMIndexPageController)));
 }

@@ -13,4 +13,4 @@ class DECMIndexPageController : DAPPPageController {
       .view(ECMIndexView(this));
   }
 }
-mixin(ControllerCalls!("ECMIndexPageController", "DECMIndexPageController"));
+mixin(ControllerCalls!("ECMIndexPageController"));
