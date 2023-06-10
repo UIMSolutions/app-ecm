@@ -3,7 +3,7 @@ module apps.ecm.controllers.pages.error;
 import apps.ecm;
 @safe:
 
-class DECMErrorPageController : DAPPPageController {
+class DECMErrorPageController : DPageController {
   mixin(ControllerThis!("ECMErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {

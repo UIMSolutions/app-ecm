@@ -3,7 +3,7 @@ module apps.ecm.controllers.pages.index;
 import apps.ecm;
 @safe:
 
-class DECMIndexPageController : DAPPPageController {
+class DECMIndexPageController : DPageController {
   mixin(ControllerThis!("ECMIndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
