@@ -27,9 +27,10 @@ public {
 
 static this() {
   AppRegistry.register("apps.ecm",  
-    App
-    .name("ecmApp")
-    .rootPath("/apps/ecm")
-    .addRoute(Route("", HTTPMethod.GET, ECMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, ECMIndexPageController)));
+    App("ecmApp", "/apps/ecm")
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
