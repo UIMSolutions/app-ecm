@@ -27,7 +27,7 @@ public {
 
 static this() {
   AppRegistry.register("apps.ecm",  
-    App("ecmApp", "/apps/ecm")
+    App("ecmApp", "apps/ecm")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
