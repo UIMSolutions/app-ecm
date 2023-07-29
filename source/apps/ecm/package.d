@@ -2,8 +2,10 @@ module apps.ecm;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -26,12 +28,18 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.ecm",  
-    App("ecmApp", "apps/ecm")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("ecmApp", "apps/ecm");
+
+  with(myApp) {
+    importTranslations;
+    addControllers([
+      "ecm.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("ecm.index")),
+      Route("/", HTTPMethod.GET, controller("ecm.index"))
     );
+  }
+  
+  AppRegistry.register("apps.ecm", myApp);
 }
